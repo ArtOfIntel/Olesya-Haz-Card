@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olesya Haz - Business Card Designs</title>
+    <!-- Local Fonts -->
+    <style>
+        @font-face {
+            font-family: 'Cormorant Garamond';
+            src: url('.docs/fonts/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+            font-weight: 300 700;
+        }
+
+        @font-face {
+            font-family: 'Cormorant Garamond Italic';
+            src: url('.docs/fonts/Cormorant_Garamond/CormorantGaramond-Italic-VariableFont_wght.ttf') format('truetype');
+            font-weight: 300 700;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            src: url('.docs/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+            font-weight: 200 900;
+        }
+
+        :root {
+            --primary: #6D806B;
+            --secondary: #E8DCC5;
+            --accent: #533D1E;
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+            /* Updated Fonts */
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'Nunito Sans', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 60px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        h1.page-title {
+            text-align: center;
+            font-family: var(--font-heading);
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* Card Base Styles */
+        .card {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            /* Standard widescreen business card ratio for a web view */
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            position: relative;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                flex-direction: column;
+                aspect-ratio: auto;
+                min-height: 500px;
+            }
+        }
+
+        /* Brand Assets Helper Classes */
+        .logo-img {
+            max-width: 180px;
+            height: auto;
+        }
+
+        /* Design 1: The Minimalist */
+        .design-1 {
+            background-color: var(--secondary);
+            color: var(--accent);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: row;
+        }
+
+        .design-1 .content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            z-index: 2;
+        }
+
+        .design-1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        .design-1 h2 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            /* Larger for Serif */
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: var(--primary);
+        }
+
+        .design-1 .tagline {
+            font-family: 'Cormorant Garamond Italic', serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .design-1 .contact-info {
+            display: flex;
+            gap: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .design-1 .divider {
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent);
+            margin: 10px 0;
+        }
+
+        /* Design 2: The Nurturer (Split) */
+        .design-2 {
+            background-color: #fff;
+        }
+
+        .design-2 .image-side {
+            flex: 1;
+            position: relative;
+            background-color: var(--primary);
+            /* Solid primary color instead of image */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .design-2 .image-side::after {
+            /* Pattern or texture */
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0.1;
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #000 10px, #000 11px);
+        }
+
+        .design-2 .image-side img.logo-watermark {
+            width: 50%;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        .design-2 .info-side {
+            flex: 1.2;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: var(--text-dark);
+        }
+
+        .design-2 .role {
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.8rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .design-2 h2 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            color: var(--accent);
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+
+        .design-2 .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 1rem;
+        }
+
+        .design-2 .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .design-2 .icon {
+            color: var(--primary);
+        }
+
+        /* Design 3: The Professional (Dark/Elegant) */
+        .design-3 {
+            background-color: var(--accent);
+            /* Dark brown base */
+            color: var(--secondary);
+            flex-direction: row-reverse;
+        }
+
+        .design-3 .content-side {
+            flex: 1;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .design-3 .graphic-side {
+            flex: 0.4;
+            background-color: var(--primary);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .design-3 .graphic-circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            right: -100px;
+        }
+
+        .design-3 h2 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .design-3 .subtitle {
+            font-family: var(--font-body);
+            font-weight: 300;
+            color: var(--secondary);
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .design-3 .quote {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            line-height: 1.4;
+            margin: 40px 0;
+            color: #fff;
+            opacity: 0.9;
+        }
+
+        .design-3 .details {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid rgba(232, 220, 197, 0.3);
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .design-3 .details div {
+            flex: 1;
+        }
+
+        /* Label styling for presentation */
+        .card-label {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="page-title">Business Card Concepts</h1>
+
+        <!-- Design 1 -->
+        <div>
+            <div class="card-label">Option 1: The Minimalist</div>
+            <div class="card design-1">
+                <div class="content">
+                    <img src=".docs/logo.png" alt="Olesya Haz Logo" class="logo-img">
+                    <div class="divider"></div>
+                    <h2>Olesya Haz</h2>
+                    <p class="tagline">"You don't have to navigate this alone"</p>
+                    <div class="contact-info">
+                        <span>heal@olesyahaz.com</span>
+                        <span>|</span>
+                        <span>+971 54 280 8118</span>
+                        <span>|</span>
+                        <span>@olesyahaz.psy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design 2 -->
+        <div>
+            <div class="card-label">Option 2: The Nurturer</div>
+            <div class="card design-2">
+                <div class="image-side">
+                    <img src=".docs/logo.png" alt="Olesya Haz" class="logo-watermark">
+                </div>
+                <div class="info-side">
+                    <div class="role">Counseling & Therapy</div>
+                    <h2>Olesya Haz</h2>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <span class="icon">✉</span> heal@olesyahaz.com
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">☏</span> +971 54 280 8118
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📷</span> @olesyahaz.psy
+                        </div>
+                        <div class="contact-item" style="margin-top: 10px; font-style: italic; color: #888;">
+                            "Transformation is a journey, and I will walk it with you."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design 3 -->
+        <div>
+            <div class="card-label">Option 3: The Professional</div>
+            <div class="card design-3">
+                <div class="content-side">
+                    <div>
+                        <h2>Olesya Haz</h2>
+                        <div class="subtitle">Partners in creating healthier minds</div>
+                    </div>
+                    <div class="quote">
+                        The safe space where your truth is heard.
+                    </div>
+                    <div class="details">
+                        <div>
+                            <strong>Contact</strong><br>
+                            +971 54 280 8118<br>
+                            heal@olesyahaz.com
+                        </div>
+                        <div>
+                            <strong>Social</strong><br>
+                            @olesyahaz.psy<br>
+                            YouTube / LinkedIn
+                        </div>
+                    </div>
+                </div>
+                <div class="graphic-side">
+                    <div class="graphic-circle"></div>
+                    <img src=".docs/logo.png" style="width: 120px; filter: brightness(0) invert(1);" alt="Watermark">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
