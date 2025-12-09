@@ -82,10 +82,48 @@
         }
 
         @media (max-width: 600px) {
+
+            /* Scale content down for mobile instead of breaking layout */
             .card {
-                flex-direction: column;
-                aspect-ratio: auto;
-                min-height: 500px;
+                /* Maintain aspect ratio and horizontal layout */
+                font-size: 0.7rem;
+                /* Scale base font */
+            }
+
+            .design-1 h2,
+            .design-2 h2,
+            .design-3 h2 {
+                font-size: 1.8rem !important;
+            }
+
+            .design-1 .content,
+            .design-2 .info-side,
+            .design-3 .content-side {
+                padding: 15px !important;
+                gap: 10px !important;
+            }
+
+            .design-3 .quote {
+                font-size: 0.9rem !important;
+                margin: 15px 0 !important;
+            }
+
+            .design-1 .tagline {
+                font-size: 0.9rem !important;
+                margin-bottom: 10px !important;
+            }
+
+            .design-2 .role {
+                margin-bottom: 5px !important;
+            }
+
+            .design-3 .graphic-circle {
+                width: 150px !important;
+                height: 150px !important;
+            }
+
+            .logo-img {
+                max-width: 100px !important;
             }
         }
 
