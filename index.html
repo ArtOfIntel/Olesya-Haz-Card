@@ -81,6 +81,7 @@
             position: relative;
         }
 
+
         @media (max-width: 600px) {
 
             /* Scale content down for mobile instead of breaking layout */
@@ -90,36 +91,17 @@
                 /* Scale base font */
             }
 
-            .design-1 h2,
-            .design-2 h2,
-            .design-3 h2 {
+            .design-2 h2 {
                 font-size: 1.8rem !important;
             }
 
-            .design-1 .content,
-            .design-2 .info-side,
-            .design-3 .content-side {
+            .design-2 .info-side {
                 padding: 15px !important;
                 gap: 10px !important;
             }
 
-            .design-3 .quote {
-                font-size: 0.9rem !important;
-                margin: 15px 0 !important;
-            }
-
-            .design-1 .tagline {
-                font-size: 0.9rem !important;
-                margin-bottom: 10px !important;
-            }
-
             .design-2 .role {
                 margin-bottom: 5px !important;
-            }
-
-            .design-3 .graphic-circle {
-                width: 150px !important;
-                height: 150px !important;
             }
 
             .logo-img {
@@ -133,63 +115,7 @@
             height: auto;
         }
 
-        /* Design 1: The Minimalist */
-        .design-1 {
-            background-color: var(--secondary);
-            color: var(--accent);
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            flex-direction: row;
-        }
 
-        .design-1 .content {
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            z-index: 2;
-        }
-
-        .design-1::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
-        }
-
-        .design-1 h2 {
-            font-family: var(--font-heading);
-            font-size: 3.5rem;
-            /* Larger for Serif */
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            color: var(--primary);
-        }
-
-        .design-1 .tagline {
-            font-family: 'Cormorant Garamond Italic', serif;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        .design-1 .contact-info {
-            display: flex;
-            gap: 30px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .design-1 .divider {
-            width: 60px;
-            height: 2px;
-            background-color: var(--accent);
-            margin: 10px 0;
-        }
 
         /* Design 2: The Nurturer (Split) */
         .design-2 {
@@ -266,75 +192,33 @@
             color: var(--primary);
         }
 
-        /* Design 3: The Professional (Dark/Elegant) */
-        .design-3 {
-            background-color: var(--accent);
-            /* Dark brown base */
-            color: var(--secondary);
-            flex-direction: row-reverse;
-        }
 
-        .design-3 .content-side {
-            flex: 1;
-            padding: 60px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .design-3 .graphic-side {
-            flex: 0.4;
+        /* Design 2: Back Side */
+        .design-2-back {
             background-color: var(--primary);
-            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            position: relative;
         }
 
-        .design-3 .graphic-circle {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
+        .design-2-back::after {
+            content: '';
+            width: 100%;
+            height: 100%;
             position: absolute;
-            right: -100px;
+            opacity: 0.1;
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #000 10px, #000 11px);
+            pointer-events: none;
         }
 
-        .design-3 h2 {
-            font-family: var(--font-heading);
-            font-size: 2.8rem;
-            color: #fff;
-            margin-bottom: 5px;
-        }
-
-        .design-3 .subtitle {
-            font-family: var(--font-body);
-            font-weight: 300;
-            color: var(--secondary);
-            font-size: 1.1rem;
-            letter-spacing: 0.05em;
-        }
-
-        .design-3 .quote {
-            font-family: var(--font-heading);
-            font-size: 1.4rem;
-            line-height: 1.4;
-            margin: 40px 0;
-            color: #fff;
+        .center-logo {
+            max-width: 30%;
+            height: auto;
+            filter: brightness(0) invert(1);
+            /* White logo */
+            z-index: 2;
             opacity: 0.9;
-        }
-
-        .design-3 .details {
-            display: flex;
-            justify-content: space-between;
-            border-top: 1px solid rgba(232, 220, 197, 0.3);
-            padding-top: 20px;
-            font-size: 0.9rem;
-        }
-
-        .design-3 .details div {
-            flex: 1;
         }
 
         /* Label styling for presentation */
@@ -353,29 +237,9 @@
     <div class="container">
         <h1 class="page-title">Business Card Concepts</h1>
 
-        <!-- Design 1 -->
+        <!-- Design 2: The Nurturer -->
         <div>
-            <div class="card-label">Option 1: The Minimalist</div>
-            <div class="card design-1">
-                <div class="content">
-                    <img src=".docs/logo.png" alt="Olesya Haz Logo" class="logo-img">
-                    <div class="divider"></div>
-                    <h2>Olesya Haz</h2>
-                    <p class="tagline">"You don't have to navigate this alone"</p>
-                    <div class="contact-info">
-                        <span>heal@olesyahaz.com</span>
-                        <span>|</span>
-                        <span>+971 54 280 8118</span>
-                        <span>|</span>
-                        <span>@olesyahaz.psy</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Design 2 -->
-        <div>
-            <div class="card-label">Option 2: The Nurturer</div>
+            <div class="card-label">Front Side</div>
             <div class="card design-2">
                 <div class="image-side">
                     <img src=".docs/logo.png" alt="Olesya Haz" class="logo-watermark">
@@ -391,45 +255,23 @@
                             <span class="icon">☏</span> +971 54 280 8118
                         </div>
                         <div class="contact-item">
+                            <span class="icon">🌐</span> olesyahaz.com
+                        </div>
+                        <div class="contact-item">
                             <span class="icon">📷</span> @olesyahaz.psy
                         </div>
                         <div class="contact-item" style="margin-top: 10px; font-style: italic; color: #888;">
-                            "The safe space where your truth is heard." ~
+                            "The safe space where your truth is heard."
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Design 3 -->
         <div>
-            <div class="card-label">Option 3: The Professional</div>
-            <div class="card design-3">
-                <div class="content-side">
-                    <div>
-                        <h2>Olesya Haz</h2>
-                        <div class="subtitle">Partners in creating healthier minds</div>
-                    </div>
-                    <div class="quote">
-                        The safe space where your truth is heard.
-                    </div>
-                    <div class="details">
-                        <div>
-                            <strong>Contact</strong><br>
-                            +971 54 280 8118<br>
-                            heal@olesyahaz.com
-                        </div>
-                        <div>
-                            <strong>Social</strong><br>
-                            @olesyahaz.psy<br>
-                            YouTube / LinkedIn
-                        </div>
-                    </div>
-                </div>
-                <div class="graphic-side">
-                    <div class="graphic-circle"></div>
-                    <img src=".docs/logo.png" style="width: 120px; filter: brightness(0) invert(1);" alt="Watermark">
-                </div>
+            <div class="card-label">Back Side</div>
+            <div class="card design-2-back">
+                <img src=".docs/logo.png" alt="Olesya Haz Logo" class="center-logo">
             </div>
         </div>
 
