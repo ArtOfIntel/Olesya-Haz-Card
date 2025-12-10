@@ -12,7 +12,7 @@
         /* 1. Cormorant Garamond (Serif, Headings) */
         @font-face {
             font-family: 'CormorantGaramond';
-            src: url('CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+            src: url('.docs/fonts/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
             font-weight: 300 700;
             /* Define the range of weights available in the variable font */
             font-display: swap;
@@ -21,7 +21,7 @@
         /* 2. Nunito Sans (Sans-serif, Body/UI) */
         @font-face {
             font-family: 'NunitoSans';
-            src: url('NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+            src: url('.docs/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
             font-weight: 200 900;
             /* Define the range of weights available in the variable font */
             font-display: swap;
@@ -37,6 +37,11 @@
 
         .swatch-card:hover {
             transform: translateY(-5px);
+        }
+
+        section {
+            /* page-break-after: always; */
+            page-break-inside: avoid;
         }
     </style>
 
@@ -62,52 +67,54 @@
     </script>
 </head>
 
-<body class="bg-[#F9F7F2] text-slate-800 font-sans antialiased">
+<body class="bg-brand-accent text-slate-800 font-sans antialiased">
 
     <!-- Navigation (Links removed as requested) -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-secondary/50">
+    <nav class="bg-[#ffffff] xsticky top-0 z-50 backdrop-blur-md border-b border-brand-secondary/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <!-- Logo - References uploaded file: logo.png -->
-                    <img class="h-12 w-auto object-contain" src="logo.png" alt="Olesya Haz Logo"
+                    <!-- Logo - References uploaded file: .docs/logo.png -->
+                    <img class="h-12 w-auto object-contain" src=".docs/logo.png" alt="Olesya Haz Logo"
                         onerror="this.onerror=null; this.src='https://placehold.co/200x80/transparent/533D1E?text=Olesya+Haz';">
                     <span class="font-serif text-xl text-brand-accent tracking-wide hidden sm:block">Brand
                         Guidelines</span>
                 </div>
                 <!-- Navigation links removed as requested -->
-                <div class="hidden md:flex space-x-8 text-sm font-medium text-brand-primary">
+                <!-- <div class="hidden md:flex space-x-8 text-sm font-medium text-brand-primary">
                     <a href="#assets"
                         class="bg-brand-primary text-white px-4 py-2 rounded-full hover:bg-brand-accent transition">Download
                         Assets</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </nav>
 
     <!-- Hero Header -->
-    <header class="relative bg-brand-secondary/30 pt-24 pb-32 overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
-            <svg viewBox="0 0 100 100" preserveAspectRatio="none"
-                class="absolute w-full h-full text-brand-primary fill-current">
-                <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
-            </svg>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h1 class="font-serif text-5xl md:text-7xl text-brand-accent mb-6 font-light">
-                Olesya Haz
-            </h1>
-            <p class="text-xl md:text-2xl text-brand-primary max-w-2xl mx-auto font-light leading-relaxed">
-                Coaching & Consulting Brand Identity
-            </p>
-            <p class="mt-4 text-slate-500 italic">"The safe space where your truth is heard."</p>
-        </div>
-    </header>
+    <div class="bg-[#F9F7F2]">
+        <header class="relative bg-brand-secondary/30 pt-24 pb-32 overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none"
+                    class="absolute w-full h-full text-brand-primary fill-current">
+                    <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+                </svg>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h1 class="font-serif text-5xl md:text-7xl text-brand-accent mb-6 font-light">
+                    Olesya Haz
+                </h1>
+                <p class="text-xl md:text-2xl text-brand-primary max-w-2xl mx-auto font-light leading-relaxed">
+                    Coaching & Consulting Brand Identity
+                </p>
+                <p class="mt-4 text-slate-500 italic">"The safe space where your truth is heard."</p>
+            </div>
+        </header>
+    </div>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
+    <main class="bg-[#F9F7F2] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
 
         <!-- 1. Logo Section -->
-        <section id="logo" class="scroll-mt-24">
+        <section id="logo" class="xxmt-5 scroll-mt-24">
             <div class="flex items-center gap-4 mb-8">
                 <span class="text-brand-primary opacity-50 font-serif text-4xl">01</span>
                 <h2 class="text-3xl font-serif text-brand-accent">Logo & Usage</h2>
@@ -116,7 +123,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                 <div
                     class="bg-white p-12 rounded-xl shadow-sm border border-brand-secondary flex items-center justify-center min-h-[300px]">
-                    <img src="logo.png" alt="Olesya Haz Logo Primary" class="max-w-full max-h-40 object-contain"
+                    <img src=".docs/logo.png" alt="Olesya Haz Logo Primary" class="max-w-full max-h-40 object-contain"
                         onerror="this.onerror=null; this.src='https://placehold.co/400x150/transparent/533D1E?text=Olesya+Haz+Logo';">
                 </div>
                 <div class="space-y-6">
@@ -138,7 +145,7 @@
         </section>
 
         <!-- 2. Color Palette -->
-        <section id="colors" class="scroll-mt-24">
+        <section id="colors" class="xxmt-5 scroll-mt-24">
             <div class="flex items-center gap-4 mb-8">
                 <span class="text-brand-primary opacity-50 font-serif text-4xl">02</span>
                 <h2 class="text-3xl font-serif text-brand-accent">Color Palette</h2>
@@ -235,7 +242,7 @@
         </section>
 
         <!-- 3. Typography -->
-        <section id="typography" class="scroll-mt-24">
+        <section id="typography" class="xxmt-5 scroll-mt-24">
             <div class="flex items-center gap-4 mb-8">
                 <span class="text-brand-primary opacity-50 font-serif text-4xl">03</span>
                 <h2 class="text-3xl font-serif text-brand-accent">Typography</h2>
@@ -304,7 +311,7 @@
         </section>
 
         <!-- 4. Voice & Tone -->
-        <section id="voice" class="scroll-mt-24">
+        <section id="voice" class="xxmt-5 scroll-mt-24">
             <div class="flex items-center gap-4 mb-8">
                 <span class="text-brand-primary opacity-50 font-serif text-4xl">04</span>
                 <h2 class="text-3xl font-serif text-brand-accent">Voice & Values</h2>
@@ -361,22 +368,54 @@
                 <!-- Brand Personality -->
                 <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="bg-brand-secondary/30 p-6 rounded-xl flex flex-col justify-center text-center">
-                        <span class="text-4xl mb-2">🌿</span>
+                        <div class="flex justify-center mb-2 text-brand-primary">
+                            <!-- Leaf Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" class="stroke-current" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 20h9"></path>
+                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                            </svg>
+                        </div>
                         <h4 class="font-serif text-lg font-bold text-brand-accent">Nurturing</h4>
                         <p class="text-sm text-slate-600 mt-2">We support steady, continuous growth.</p>
                     </div>
                     <div class="bg-brand-secondary/30 p-6 rounded-xl flex flex-col justify-center text-center">
-                        <span class="text-4xl mb-2">⚓</span>
+                        <div class="flex justify-center mb-2 text-brand-primary">
+                            <!-- Anchor Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="5" r="3"></circle>
+                                <line x1="12" y1="22" x2="12" y2="8"></line>
+                                <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
+                            </svg>
+                        </div>
                         <h4 class="font-serif text-lg font-bold text-brand-accent">Stable</h4>
                         <p class="text-sm text-slate-600 mt-2">A grounded presence in times of crisis.</p>
                     </div>
                     <div class="bg-brand-secondary/30 p-6 rounded-xl flex flex-col justify-center text-center">
-                        <span class="text-4xl mb-2">👐</span>
+                        <div class="flex justify-center mb-2 text-brand-primary">
+                            <!-- Hands/Support Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                            </svg>
+                        </div>
                         <h4 class="font-serif text-lg font-bold text-brand-accent">Empowering</h4>
                         <p class="text-sm text-slate-600 mt-2">Helping clients find their own strength.</p>
                     </div>
                     <div class="bg-brand-secondary/30 p-6 rounded-xl flex flex-col justify-center text-center">
-                        <span class="text-4xl mb-2">🕊️</span>
+                        <div class="flex justify-center mb-2 text-brand-primary">
+                            <!-- Bird/Dove/Gentle Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M20.24 12.24l-12.72 12.72M21 12v7h-7L7 7l12-12 3 3z"></path>
+                            </svg>
+                        </div>
                         <h4 class="font-serif text-lg font-bold text-brand-accent">Gentle</h4>
                         <p class="text-sm text-slate-600 mt-2">Honest but delivered with kindness.</p>
                     </div>
@@ -406,7 +445,7 @@
         </section>
 
         <!-- 5. Services Overview -->
-        <section id="services" class="scroll-mt-24">
+        <section id="services" class="xxmt-5 scroll-mt-24">
             <div class="flex items-center gap-4 mb-8">
                 <span class="text-brand-primary opacity-50 font-serif text-4xl">05</span>
                 <h2 class="text-3xl font-serif text-brand-accent">Services</h2>
@@ -462,8 +501,8 @@
     <footer class="bg-brand-accent text-brand-secondary py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div>
-                <!-- Logo - References uploaded file: logo.png -->
-                <img src="logo.png" alt="Olesya Haz" class="h-12 w-auto mb-6 brightness-0 invert opacity-80"
+                <!-- Logo - References uploaded file: .docs/logo.png -->
+                <img src=".docs/logo.png" alt="Olesya Haz" class="h-12 w-auto mb-6 brightness-0 invert opacity-80"
                     onerror="this.onerror=null; this.remove();">
                 <p class="text-sm opacity-70 leading-relaxed">
                     A safe space to talk, explore, and feel understood. Professional coaching and consulting for
@@ -475,14 +514,39 @@
                 <h4 class="font-serif text-xl mb-6 text-white">Contact</h4>
                 <ul class="space-y-4 text-sm opacity-80">
                     <li class="flex items-center gap-3">
-                        <span>📧</span> <a href="mailto:heal@olesyahaz.com"
-                            class="hover:text-white transition">heal@olesyahaz.com</a>
+                        <span class="flex items-center justify-center w-5 h-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                class="w-4 h-4 text-brand-secondary">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </span>
+                        <a href="mailto:heal@olesyahaz.com" class="hover:text-white transition">heal@olesyahaz.com</a>
                     </li>
                     <li class="flex items-center gap-3">
-                        <span>📞</span> <span>+971 54 280 8118</span>
+                        <span class="flex items-center justify-center w-5 h-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                class="w-4 h-4 text-brand-secondary">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.12 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span>+971 54 280 8118</span>
                     </li>
                     <li class="flex items-center gap-3">
-                        <span>📍</span> <span>Dubai, UAE</span>
+                        <span class="flex items-center justify-center w-5 h-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                class="w-4 h-4 text-brand-secondary">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </span>
+                        <span>Dubai, UAE</span>
                     </li>
                 </ul>
             </div>
@@ -490,10 +554,55 @@
             <div>
                 <h4 class="font-serif text-xl mb-6 text-white">Social</h4>
                 <ul class="space-y-4 text-sm opacity-80">
-                    <li><a href="#" class="hover:text-white transition">Instagram (@olesyahaz.psy)</a></li>
-                    <li><a href="#" class="hover:text-white transition">Facebook</a></li>
-                    <li><a href="#" class="hover:text-white transition">LinkedIn</a></li>
-                    <li><a href="#" class="hover:text-white transition">YouTube</a></li>
+                    <li class="flex items-center gap-3">
+                        <span class="flex items-center justify-center w-5 h-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                class="w-4 h-4 text-brand-secondary">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </span>
+                        <a href="#" class="hover:text-white transition">Instagram</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="flex items-center justify-center w-5 h-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                class="w-4 h-4 text-brand-secondary">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </span>
+                        <a href="#" class="hover:text-white transition">Facebook</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="flex items-center justify-center w-5 h-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                class="w-4 h-4 text-brand-secondary">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </span>
+                        <a href="#" class="hover:text-white transition">LinkedIn</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="flex items-center justify-center w-5 h-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                class="w-4 h-4 text-brand-secondary">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </span>
+                        <a href="#" class="hover:text-white transition">YouTube</a>
+                    </li>
                 </ul>
             </div>
 
