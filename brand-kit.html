@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olesya Haz | Brand Identity Guidelines</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Font Definition -->
+    <style>
+        /* 1. Cormorant Garamond (Serif, Headings) */
+        @font-face {
+            font-family: 'CormorantGaramond';
+            src: url('CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+            font-weight: 300 700;
+            /* Define the range of weights available in the variable font */
+            font-display: swap;
+        }
+
+        /* 2. Nunito Sans (Sans-serif, Body/UI) */
+        @font-face {
+            font-family: 'NunitoSans';
+            src: url('NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+            font-weight: 200 900;
+            /* Define the range of weights available in the variable font */
+            font-display: swap;
+        }
+
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .swatch-card {
+            transition: transform 0.2s ease;
+        }
+
+        .swatch-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#6D806B',   /* Muted Green */
+                            secondary: '#E8DCC5', /* Soft Beige */
+                            accent: '#533D1E',    /* Deep Earth Brown */
+                        }
+                    },
+                    fontFamily: {
+                        /* Use the custom font names defined in @font-face */
+                        serif: ['CormorantGaramond', 'serif'],
+                        sans: ['NunitoSans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-[#F9F7F2] text-slate-800 font-sans antialiased">
+
+    <!-- Navigation (Links removed as requested) -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-secondary/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- Logo - References uploaded file: logo.png -->
+                    <img class="h-12 w-auto object-contain" src="logo.png" alt="Olesya Haz Logo"
+                        onerror="this.onerror=null; this.src='https://placehold.co/200x80/transparent/533D1E?text=Olesya+Haz';">
+                    <span class="font-serif text-xl text-brand-accent tracking-wide hidden sm:block">Brand
+                        Guidelines</span>
+                </div>
+                <!-- Navigation links removed as requested -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-brand-primary">
+                    <a href="#assets"
+                        class="bg-brand-primary text-white px-4 py-2 rounded-full hover:bg-brand-accent transition">Download
+                        Assets</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="relative bg-brand-secondary/30 pt-24 pb-32 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none"
+                class="absolute w-full h-full text-brand-primary fill-current">
+                <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+            </svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h1 class="font-serif text-5xl md:text-7xl text-brand-accent mb-6 font-light">
+                Olesya Haz
+            </h1>
+            <p class="text-xl md:text-2xl text-brand-primary max-w-2xl mx-auto font-light leading-relaxed">
+                Coaching & Consulting Brand Identity
+            </p>
+            <p class="mt-4 text-slate-500 italic">"The safe space where your truth is heard."</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
+
+        <!-- 1. Logo Section -->
+        <section id="logo" class="scroll-mt-24">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-brand-primary opacity-50 font-serif text-4xl">01</span>
+                <h2 class="text-3xl font-serif text-brand-accent">Logo & Usage</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <div
+                    class="bg-white p-12 rounded-xl shadow-sm border border-brand-secondary flex items-center justify-center min-h-[300px]">
+                    <img src="logo.png" alt="Olesya Haz Logo Primary" class="max-w-full max-h-40 object-contain"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x150/transparent/533D1E?text=Olesya+Haz+Logo';">
+                </div>
+                <div class="space-y-6">
+                    <p class="text-slate-600 leading-relaxed">
+                        The Olesya Haz logo is the primary visual identifier. It represents a safe, flowing, and
+                        professional space. It should be used with sufficient clear space (padding) around it to ensure
+                        legibility.
+                    </p>
+                    <div class="bg-brand-primary p-8 rounded-xl text-white">
+                        <h3 class="font-serif text-xl mb-4">Clear Space & Positioning</h3>
+                        <p class="text-white/80 text-sm mb-4">Ensure the logo has breathing room. Do not crowd it with
+                            other text or graphics.</p>
+                        <div class="border border-dashed border-white/40 p-4 inline-block rounded">
+                            <span class="text-xs uppercase tracking-widest opacity-70">Clear Space</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Color Palette -->
+        <section id="colors" class="scroll-mt-24">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-brand-primary opacity-50 font-serif text-4xl">02</span>
+                <h2 class="text-3xl font-serif text-brand-accent">Color Palette</h2>
+            </div>
+
+            <p class="mb-8 text-slate-600 max-w-3xl">
+                Our palette is grounded in nature, evoking feelings of calm, safety, and organic growth. The Primary
+                Green establishes trust and balance, while the Beige provides a soft, neutral foundation. The Deep Earth
+                Brown acts as a strong anchor for text and accents.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Primary -->
+                <div class="swatch-card group">
+                    <div
+                        class="h-48 rounded-t-xl bg-[#6D806B] shadow-inner flex items-end p-4 relative overflow-hidden">
+                        <span
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-white text-xs font-bold uppercase">Primary</span>
+                    </div>
+                    <div class="bg-white border border-t-0 border-brand-secondary rounded-b-xl p-6">
+                        <h3 class="font-serif text-xl text-[#6D806B] mb-1">Sage Green</h3>
+                        <p class="text-xs text-slate-400 uppercase tracking-widest mb-4">Main Brand Color</p>
+                        <div class="space-y-2 font-mono text-sm text-slate-600">
+                            <div class="flex justify-between border-b border-slate-100 pb-1">
+                                <span>HEX</span>
+                                <span class="select-all cursor-pointer">#6D806B</span>
+                            </div>
+                            <div class="flex justify-between border-b border-slate-100 pb-1">
+                                <span>RGB</span>
+                                <span>109, 128, 107</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Usage</span>
+                                <span>Headers, CTAs, Icons</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary -->
+                <div class="swatch-card group">
+                    <div
+                        class="h-48 rounded-t-xl bg-[#E8DCC5] shadow-inner flex items-end p-4 relative overflow-hidden">
+                        <span
+                            class="absolute top-4 right-4 bg-black/5 backdrop-blur-sm px-2 py-1 rounded text-slate-700 text-xs font-bold uppercase">Secondary</span>
+                    </div>
+                    <div class="bg-white border border-t-0 border-brand-secondary rounded-b-xl p-6">
+                        <h3 class="font-serif text-xl text-[#533D1E] mb-1">Warm Sand</h3>
+                        <p class="text-xs text-slate-400 uppercase tracking-widest mb-4">Backgrounds & Soft UI</p>
+                        <div class="space-y-2 font-mono text-sm text-slate-600">
+                            <div class="flex justify-between border-b border-slate-100 pb-1">
+                                <span>HEX</span>
+                                <span class="select-all cursor-pointer">#E8DCC5</span>
+                            </div>
+                            <div class="flex justify-between border-b border-slate-100 pb-1">
+                                <span>RGB</span>
+                                <span>232, 220, 197</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Usage</span>
+                                <span>Backgrounds, Cards</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accent -->
+                <div class="swatch-card group">
+                    <div
+                        class="h-48 rounded-t-xl bg-[#533D1E] shadow-inner flex items-end p-4 relative overflow-hidden">
+                        <span
+                            class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-white text-xs font-bold uppercase">Accent</span>
+                    </div>
+                    <div class="bg-white border border-t-0 border-brand-secondary rounded-b-xl p-6">
+                        <h3 class="font-serif text-xl text-[#533D1E] mb-1">Deep Earth</h3>
+                        <p class="text-xs text-slate-400 uppercase tracking-widest mb-4">Text & Emphasis</p>
+                        <div class="space-y-2 font-mono text-sm text-slate-600">
+                            <div class="flex justify-between border-b border-slate-100 pb-1">
+                                <span>HEX</span>
+                                <span class="select-all cursor-pointer">#533D1E</span>
+                            </div>
+                            <div class="flex justify-between border-b border-slate-100 pb-1">
+                                <span>RGB</span>
+                                <span>83, 61, 30</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Usage</span>
+                                <span>Body Text, Strong Borders</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Typography -->
+        <section id="typography" class="scroll-mt-24">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-brand-primary opacity-50 font-serif text-4xl">03</span>
+                <h2 class="text-3xl font-serif text-brand-accent">Typography</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Headings -->
+                <div class="space-y-6">
+                    <div class="border-b border-brand-secondary pb-4">
+                        <span class="text-xs font-bold text-brand-primary uppercase tracking-widest">Primary
+                            Typeface</span>
+                        <h3 class="text-4xl mt-2 font-serif text-brand-accent">Cormorant Garamond (Custom TTF)</h3>
+                        <p class="text-sm text-slate-500 mt-1">Elegant, timeless, and empathetic. Used for all headings
+                            and quotes.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <span class="text-xs text-slate-400 block mb-1">Heading 1 (H1)</span>
+                            <p class="font-serif text-5xl text-brand-accent">Healing & Growth</p>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 block mb-1">Heading 2 (H2)</span>
+                            <p class="font-serif text-3xl text-brand-primary">Your Journey Starts Here</p>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 block mb-1">Quote / Italic</span>
+                            <p class="font-serif italic text-2xl text-brand-accent">"A safe space to talk, explore, and
+                                feel understood."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Body -->
+                <div class="space-y-6">
+                    <div class="border-b border-brand-secondary pb-4">
+                        <span class="text-xs font-bold text-brand-primary uppercase tracking-widest">Secondary
+                            Typeface</span>
+                        <h3 class="text-4xl mt-2 font-sans font-medium text-brand-accent">Nunito Sans (Custom TTF)</h3>
+                        <p class="text-sm text-slate-500 mt-1">Clean, modern, and readable. Used for body text, UI
+                            elements, and buttons.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <span class="text-xs text-slate-400 block mb-1">Body Text</span>
+                            <p class="font-sans text-slate-600 leading-relaxed">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Transformation is a journey,
+                                and I will walk it with you. We focus on mindfulness and clarity to help you find your
+                                balance.
+                            </p>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 block mb-1">Button / UI</span>
+                            <div class="flex gap-3 mt-2">
+                                <button
+                                    class="px-6 py-2 bg-brand-primary text-white font-sans text-sm font-medium rounded hover:bg-brand-accent transition">Primary
+                                    Action</button>
+                                <button
+                                    class="px-6 py-2 border border-brand-primary text-brand-primary font-sans text-sm font-medium rounded hover:bg-brand-secondary transition">Secondary</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Voice & Tone -->
+        <section id="voice" class="scroll-mt-24">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-brand-primary opacity-50 font-serif text-4xl">04</span>
+                <h2 class="text-3xl font-serif text-brand-accent">Voice & Values</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Core Values -->
+                <div class="lg:col-span-1 bg-white p-8 rounded-xl shadow-sm border-t-4 border-brand-primary">
+                    <h3 class="font-serif text-2xl text-brand-accent mb-6">Core Values</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-primary mt-1" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-700">Empathy & Compassion</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-primary mt-1" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-700">Safe Space & Comfort</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-primary mt-1" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-700">Holistic Healing</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-primary mt-1" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-700">Professional Trust</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-primary mt-1" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-700">Individual Approach</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Brand Personality -->
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-brand-secondary/30 p-6 rounded-xl flex flex-col justify-center text-center">
+                        <span class="text-4xl mb-2">🌿</span>
+                        <h4 class="font-serif text-lg font-bold text-brand-accent">Nurturing</h4>
+                        <p class="text-sm text-slate-600 mt-2">We support steady, continuous growth.</p>
+                    </div>
+                    <div class="bg-brand-secondary/30 p-6 rounded-xl flex flex-col justify-center text-center">
+                        <span class="text-4xl mb-2">⚓</span>
+                        <h4 class="font-serif text-lg font-bold text-brand-accent">Stable</h4>
+                        <p class="text-sm text-slate-600 mt-2">A grounded presence in times of crisis.</p>
+                    </div>
+                    <div class="bg-brand-secondary/30 p-6 rounded-xl flex flex-col justify-center text-center">
+                        <span class="text-4xl mb-2">👐</span>
+                        <h4 class="font-serif text-lg font-bold text-brand-accent">Empowering</h4>
+                        <p class="text-sm text-slate-600 mt-2">Helping clients find their own strength.</p>
+                    </div>
+                    <div class="bg-brand-secondary/30 p-6 rounded-xl flex flex-col justify-center text-center">
+                        <span class="text-4xl mb-2">🕊️</span>
+                        <h4 class="font-serif text-lg font-bold text-brand-accent">Gentle</h4>
+                        <p class="text-sm text-slate-600 mt-2">Honest but delivered with kindness.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Taglines -->
+            <div class="mt-12">
+                <h3 class="font-serif text-2xl text-brand-accent mb-6">Key Messages</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 border-l-4 border-brand-primary bg-white shadow-sm">
+                        <p class="font-serif italic text-lg text-slate-700">"You don't have to navigate this alone."</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-brand-secondary bg-white shadow-sm">
+                        <p class="font-serif italic text-lg text-slate-700">"Voices of those who found their balance."
+                        </p>
+                    </div>
+                    <div class="p-4 border-l-4 border-brand-secondary bg-white shadow-sm">
+                        <p class="font-serif italic text-lg text-slate-700">"Spend time with someone who truly listens."
+                        </p>
+                    </div>
+                    <div class="p-4 border-l-4 border-brand-primary bg-white shadow-sm">
+                        <p class="font-serif italic text-lg text-slate-700">"Partners in creating healthier minds."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Services Overview -->
+        <section id="services" class="scroll-mt-24">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-brand-primary opacity-50 font-serif text-4xl">05</span>
+                <h2 class="text-3xl font-serif text-brand-accent">Services</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div
+                        class="w-10 h-10 rounded-full bg-brand-secondary/50 flex items-center justify-center mb-4 text-brand-accent">
+                        1</div>
+                    <h3 class="font-bold text-brand-accent mb-2">Anxiety Management</h3>
+                    <p class="text-sm text-slate-500">Helping clients find calm in chaos.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div
+                        class="w-10 h-10 rounded-full bg-brand-secondary/50 flex items-center justify-center mb-4 text-brand-accent">
+                        2</div>
+                    <h3 class="font-bold text-brand-accent mb-2">Life Stage Crisis</h3>
+                    <p class="text-sm text-slate-500">Navigating transitions with clarity.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div
+                        class="w-10 h-10 rounded-full bg-brand-secondary/50 flex items-center justify-center mb-4 text-brand-accent">
+                        3</div>
+                    <h3 class="font-bold text-brand-accent mb-2">Relationship Challenges</h3>
+                    <p class="text-sm text-slate-500">Building connection and understanding.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div
+                        class="w-10 h-10 rounded-full bg-brand-secondary/50 flex items-center justify-center mb-4 text-brand-accent">
+                        4</div>
+                    <h3 class="font-bold text-brand-accent mb-2">Childhood Imprints</h3>
+                    <p class="text-sm text-slate-500">Healing trauma and old patterns.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div
+                        class="w-10 h-10 rounded-full bg-brand-secondary/50 flex items-center justify-center mb-4 text-brand-accent">
+                        5</div>
+                    <h3 class="font-bold text-brand-accent mb-2">Self-Love & Confidence</h3>
+                    <p class="text-sm text-slate-500">Reconnecting with inner strength.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div
+                        class="w-10 h-10 rounded-full bg-brand-secondary/50 flex items-center justify-center mb-4 text-brand-accent">
+                        6</div>
+                    <h3 class="font-bold text-brand-accent mb-2">Grief & Loss</h3>
+                    <p class="text-sm text-slate-500">A safe space to process and heal.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer / Contact Information -->
+    <footer class="bg-brand-accent text-brand-secondary py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div>
+                <!-- Logo - References uploaded file: logo.png -->
+                <img src="logo.png" alt="Olesya Haz" class="h-12 w-auto mb-6 brightness-0 invert opacity-80"
+                    onerror="this.onerror=null; this.remove();">
+                <p class="text-sm opacity-70 leading-relaxed">
+                    A safe space to talk, explore, and feel understood. Professional coaching and consulting for
+                    healthier minds.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-xl mb-6 text-white">Contact</h4>
+                <ul class="space-y-4 text-sm opacity-80">
+                    <li class="flex items-center gap-3">
+                        <span>📧</span> <a href="mailto:heal@olesyahaz.com"
+                            class="hover:text-white transition">heal@olesyahaz.com</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span>📞</span> <span>+971 54 280 8118</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span>📍</span> <span>Dubai, UAE</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-xl mb-6 text-white">Social</h4>
+                <ul class="space-y-4 text-sm opacity-80">
+                    <li><a href="#" class="hover:text-white transition">Instagram (@olesyahaz.psy)</a></li>
+                    <li><a href="#" class="hover:text-white transition">Facebook</a></li>
+                    <li><a href="#" class="hover:text-white transition">LinkedIn</a></li>
+                    <li><a href="#" class="hover:text-white transition">YouTube</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-xl mb-6 text-white">Languages</h4>
+                <div class="flex gap-2">
+                    <span class="bg-white/10 px-3 py-1 rounded text-sm">English</span>
+                    <span class="bg-white/10 px-3 py-1 rounded text-sm">Russian</span>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-white/10 text-center text-xs opacity-50">
+            &copy; 2025 Olesya Haz. All rights reserved. Brand Kit Document.
+        </div>
+    </footer>
+
+</body>
+
+</html>
